@@ -5,14 +5,17 @@
 #include <candid.h>
 #include <string.h>
 
-void main () {
+int main () {
     char buff[BUFFSIZE];
 
     /* Read from stdin */
     while (1) {
         struct candump_line *cdl = proc_line(buff);
         printf("Got: %s\n", cdl->interface);
+        free(cdl);
     }
+
+    return 0;
 }
 
 char *get_line(char* buff) {
@@ -25,6 +28,7 @@ struct candump_line *proc_line(char* buff) {
         return NULL;
     }
 
-    memcpy(line->interface, buff, 4);    
+    memcpy(line->interface, buff, 4);
+    line->interface[4] = '\0';
     return line;
 }
