@@ -16,7 +16,7 @@ class CANFrame:
     
 
 def generate_random_frame(dlc=8) -> CANFrame:
-    header = randint(0x000, 0xFFF)
+    header = randint(0x049, 0x051)
     payload = []
     for i in range(0, dlc):
         payload.append(randint(0x00, 0xFF))
