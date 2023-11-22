@@ -1,0 +1,40 @@
+# Compiled object files
+*.o
+*.so
+*.a
+*.lo
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+candid  # or whatever your executable's name is
+
+# CMake generated files
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+CMakeFiles
+
+# Build directory
+build/
+
+# Directory for user-specific files
+.vscode/
+*.swp
+*~
+
+# System-specific ignore
+.DS_Store
+Thumbs.db
